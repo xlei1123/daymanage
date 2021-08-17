@@ -8,5 +8,8 @@ export default defineConfig({
   //   { path: '/', component: '@/pages/index' },
   // ],
   fastRefresh: {},
-  ssr: {},
+  ssr: {
+    mode: 'stream',
+    // forceInitial: true  // 无论是首屏还是页面切换，都会触发 getInitialProps
+  },
 });
