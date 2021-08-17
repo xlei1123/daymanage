@@ -1,3 +1,6 @@
+import React from 'react';
 function newSchedule() {
-  return 2;
+  return <div>111</div>;
 }
+
+export default React.memo(newSchedule);

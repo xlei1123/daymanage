@@ -21,6 +21,8 @@
   },
   "dependencies": {
     "@ant-design/pro-layout": "^6.5.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
     "react": "17.x",
     "react-dom": "17.x",
     "react-highlight-words": "^0.17.0",
