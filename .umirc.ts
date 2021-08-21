@@ -12,5 +12,6 @@ export default defineConfig({
     mode: 'stream',
     // forceInitial: true  // 无论是首屏还是页面切换，都会触发 getInitialProps
   },
+  dva: {},
   publicPath: '/static/',
 });
