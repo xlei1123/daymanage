@@ -32,16 +32,22 @@ const data = [
 function dayList() {
   const columns: ColumnsType<object> = [
     {
-      title: 'Name',
+      title: '名称',
       dataIndex: 'name',
       key: 'name',
-      width: '30%',
+      width: '20%',
     },
     {
-      title: 'Age',
-      dataIndex: 'age',
-      key: 'age',
+      title: '日期',
+      dataIndex: 'date',
+      key: 'date',
       width: '20%',
+    },
+    {
+      title: '备注',
+      dataIndex: 'remark',
+      key: 'remark',
+      width: '60%',
     },
   ];
   return <Table columns={columns} dataSource={data} />;

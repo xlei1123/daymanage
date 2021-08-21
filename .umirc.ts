@@ -4,7 +4,7 @@ export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
   },
-  // routes: [  走约定式路由
+  // routes: [  // 走约定式路由
   //   { path: '/', component: '@/pages/index' },
   // ],
   fastRefresh: {},
@@ -12,4 +12,5 @@ export default defineConfig({
     mode: 'stream',
     // forceInitial: true  // 无论是首屏还是页面切换，都会触发 getInitialProps
   },
+  publicPath: '/static/',
 });
