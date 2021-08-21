@@ -1,9 +1,9 @@
-# 基于umi3开发的日程管理系统
+# 一，基于umi3开发的日程管理系统
 > 包括新建日程 日程列表， 打通微信， 定时推送日程
 **喜欢的帮忙点个star**
 
 
-# 开发说明
+# 二，开发说明
 1. clone 项目
 2. cd daymanage
 3. npm i
@@ -38,7 +38,7 @@
 
 
 
-# 服务端渲染
+# 三，服务端渲染
 https://umijs.org/zh-CN/docs/ssr
 
 ## 其他问题
@@ -52,14 +52,14 @@ https://umijs.org/zh-CN/docs/ssr
 ## 服务端地址
 
 
-# 单测
+# 四，单测
 - https://github.com/umijs/umi/issues/446
 - 如果你以前没有过单测经验或者对单测了解较少 推荐你阅读下面这便文章：
 https://juejin.cn/post/6844903798406643725
 https://juejin.cn/post/6844903878119424008#heading-26
 
 
-# TODO
+# 五，TODO
 1. 需要chrome插件 打通浏览器弹出消息
 2. 打通手机日历 
   - 小米
@@ -67,7 +67,7 @@ https://juejin.cn/post/6844903878119424008#heading-26
   - 苹果
   - 降级的兜底方案是发送约会邮件
 
-# 你可能会遇见的一些常见问题
+# 六，你可能会遇见的一些常见问题
 1. localhost请求失败 --> 看看你的host 是否配置了 localhost， 需要配置
 2. ssr中的getInitialProps没有执行， 查看你的页面是不是用react.memo包裹起来了，不可以包裹
 
