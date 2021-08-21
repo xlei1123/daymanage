@@ -6,7 +6,9 @@ import { connect } from 'dva';
 import { Card } from 'antd';
 import styles from './index.less';
 import { IndexModelState } from './model';
-import TodayList from './components/TodayTable';
+import TodayTable from './components/TodayTable';
+import OutDateTable from './components/OutDateTable';
+import TomorrowTable from './components/TomorrowTable';
 interface Iprops {
   home: IndexModelState;
 }
@@ -21,18 +23,18 @@ function IndexPage(props: Iprops) {
     <div className={styles.ScheduleIndex}>
       <div className={styles.todaySchedule}>
         <Card title="今日任务">
-          <TodayList todayList={todayList} />;
+          <TodayTable todayList={todayList} />
         </Card>
       </div>
       <div className={styles.otherSchedule}>
         <div className={styles.outDateSchedule}>
           <Card title="过期任务">
-            <ul></ul>
+            <OutDateTable outDateList={outDateList} />
           </Card>
         </div>
         <div className={styles.tomorrowSchedule}>
           <Card title="明日任务">
-            <ul></ul>
+            <TomorrowTable tomorrowList={tomorrowList} />
           </Card>
         </div>
       </div>
@@ -48,6 +50,6 @@ IndexPage.getInitialProps = (async (ctx) => {
   return store.getState();
 }) as IGetInitialProps;
 
-export default connect((home) => {
-  home;
+export default connect((rootState) => {
+  rootState;
 })(IndexPage);
