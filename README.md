@@ -7,8 +7,9 @@
 3. npm i
 4. npm start
 
-## 特别注意
-1. 所有基础变量均配置在define中如主题色, 背景色等
+## 注意事项
+1. css变量在src/global.css中定义 后续在全局中使用； 如果考虑css变量兼容问题，则可以在.umirc.ts中define定义变量。umi会在编译时自动将所有变量替换
+
 
 
 # 服务端渲染
