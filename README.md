@@ -2,12 +2,33 @@
 > 包括新建日程 日程列表， 打通微信， 定时推送日程
 **喜欢的帮忙点个star**
 
+
 # 开发说明
 1. clone 项目
 2. cd daymanage
 3. npm i
 4. npm start
 
+## 目录
+```
+.
+├── README.md
+├── dist // 打包后输出文件目录
+├── jest.config.js // 单元测试配置
+├── mock // mock数据文件
+├── package.json
+├── public // 静态文件目录
+│   └── a.txt
+├── src
+│   ├── components // 公共组件
+│   ├── config // 常用配置
+│   ├── global.css // 全局css 文件
+│   └── pages // 页面
+├── test // 测试文件目录
+│   └── index.test.js
+├── tsconfig.json // ts配置
+└── typings.d.ts
+```
 ## 其他
 1. css变量在src/global.css中定义 后续在全局中使用； 如果考虑css变量兼容问题，则可以在.umirc.ts中define定义变量。umi会在编译时自动将所有变量替换
 2. 开启dva配置：https://umijs.org/zh-CN/plugins/plugin-dva
