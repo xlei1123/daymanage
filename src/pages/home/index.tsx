@@ -16,6 +16,7 @@ const goList = () => {
   history.push('/dayList');
 };
 function IndexPage(props: Iprops) {
+  console.log('Iprops===>', props);
   const {
     home: { todayList, outDateList, tomorrowList },
   } = props;
