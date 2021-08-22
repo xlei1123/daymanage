@@ -13,14 +13,10 @@ describe('home Model', () => {
       const { call, put } = effects;
       const getTodayListSaga = homeModel.effects.getTodayList;
       const generator = getTodayListSaga(
-        { type: `getTodayList` },
+        { type: `getTodayList`, payload: {} },
         { call, put },
       );
-      // let next = generator.next({
-      //   result: {
-      //     data: 1
-      //   }
-      // });
+      // let next = generator.next();
       // console.log('next.value===>', next.value);
       // expect(next.value).toEqual(call(service.getTodayList, 1000));
       // next = generator.next({
@@ -28,7 +24,6 @@ describe('home Model', () => {
       //     data: 1
       //   }
       // });
-      expect(1).toBe(1);
       // expect(next.value).toEqual(put({ type: `${homeModel.nameSpace}/setTodayList`, payload: '666' }));
     });
   });
