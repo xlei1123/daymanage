@@ -97,31 +97,31 @@ const proxy = {
             remark: 'Sidney No. 1 Lake Park',
           },
           {
-            key: '1',
+            key: '4',
             name: 'John Brown',
             date: 32,
             remark: 'New York No. 1 Lake Park',
           },
           {
-            key: '2',
+            key: '5',
             name: 'Joe Black',
             date: 42,
             remark: 'London No. 1 Lake Park',
           },
           {
-            key: '3',
+            key: '6',
             name: 'Jim Green',
             date: 32,
             remark: 'Sidney No. 1 Lake Park',
           },
           {
-            key: '2',
+            key: '7',
             name: 'Joe Black',
             date: 42,
             remark: 'London No. 1 Lake Park',
           },
           {
-            key: '3',
+            key: '8',
             name: 'Jim Green',
             date: 32,
             remark: 'Sidney No. 1 Lake Park',
@@ -132,4 +132,4 @@ const proxy = {
   },
 };
 
-export default delay(proxy, 500);
+export default delay(proxy, 200);

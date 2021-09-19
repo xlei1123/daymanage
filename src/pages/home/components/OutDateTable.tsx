@@ -5,7 +5,7 @@ import { ColumnsType } from 'antd/lib/table';
 import { IndexModelState } from '../model';
 import styles from '../index.less';
 interface Iprops {
-  outDateList: IndexModelState['outDateList'];
+  outDateList: IndexModelState['outDateList'] | undefined;
 }
 const columns: ColumnsType<object> = [
   {
@@ -43,7 +43,7 @@ function todayTable(props: Iprops) {
   return (
     <Table
       columns={columns}
-      dataSource={outDateList.list}
+      dataSource={outDateList?.list}
       scroll={{ y: '50vh' }}
       pagination={false}
     />
