@@ -16,9 +16,7 @@ const goList = () => {
   history.push('/dayList');
 };
 function IndexPage(props: Iprops) {
-  const {
-    home: { todayList, outDateList, tomorrowList },
-  } = props;
+  const { home: { todayList, outDateList, tomorrowList } = {} } = props;
   return (
     <div className={styles.ScheduleIndex}>
       <div className={styles.todaySchedule}>
@@ -50,6 +48,6 @@ IndexPage.getInitialProps = (async (ctx) => {
   return store.getState();
 }) as IGetInitialProps;
 
-export default connect((rootState) => {
-  rootState;
-})(IndexPage);
+export default connect((rootState) => ({
+  rootState,
+}))(IndexPage);

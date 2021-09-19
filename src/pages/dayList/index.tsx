@@ -15,13 +15,19 @@ const columns: ColumnsType<object> = [
     title: '名称',
     dataIndex: 'name',
     key: 'name',
-    width: '20%',
+    width: '10%',
   },
   {
     title: '日期',
     dataIndex: 'date',
     key: 'date',
-    width: '20%',
+    width: '10%',
+  },
+  {
+    title: '状态',
+    dataIndex: 'status',
+    key: 'status',
+    width: '10%',
   },
   {
     title: '备注',
@@ -49,13 +55,11 @@ const columns: ColumnsType<object> = [
 ];
 
 function DayList(props: Iprops) {
-  const {
-    day: { dayList },
-  } = props;
+  const { day: { dayList } = {} } = props;
   return (
     <>
       <QueryDay />
-      <Table columns={columns} dataSource={dayList.list} />;
+      <Table columns={columns} dataSource={dayList?.list} />;
     </>
   );
 }
@@ -65,10 +69,9 @@ DayList.getInitialProps = (async (ctx) => {
   await store.dispatch({
     type: 'day/getDayList',
   });
-  console.log('store.getState()===>', store.getState());
   return store.getState();
 }) as IGetInitialProps;
 
-export default connect((rootState) => {
-  rootState;
-})(DayList);
+export default connect((rootState) => ({
+  rootState,
+}))(DayList);

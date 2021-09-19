@@ -21,10 +21,13 @@
   },
   "dependencies": {
     "@ant-design/pro-layout": "^6.5.0",
+    "braft-editor": "^2.3.9",
+    "codemirror": "^5.62.3",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.6",
     "mockjs": "^1.1.0",
     "react": "17.x",
+    "react-codemirror2": "^7.2.1",
     "react-dom": "17.x",
     "react-highlight-words": "^0.17.0",
     "roadhog-api-doc": "^1.1.2",

@@ -5,7 +5,7 @@ import { ColumnsType } from 'antd/lib/table';
 import { IndexModelState } from '../model';
 import styles from '../index.less';
 interface Iprops {
-  todayList: IndexModelState['todayList'];
+  todayList: IndexModelState['todayList'] | undefined;
 }
 const columns: ColumnsType<object> = [
   {
@@ -46,7 +46,7 @@ const columns: ColumnsType<object> = [
 ];
 function todayTable(props: Iprops) {
   const { todayList } = props;
-  return <Table columns={columns} dataSource={todayList.list} />;
+  return <Table columns={columns} dataSource={todayList?.list} />;
 }
 
 export default todayTable;
