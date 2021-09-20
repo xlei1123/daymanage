@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Row, Col, Card } from 'antd';
+import { Card } from 'antd';
 import BraftEditor, { EditorState } from 'braft-editor';
 
 import 'braft-editor/dist/index.css';
