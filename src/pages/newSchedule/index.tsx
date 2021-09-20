@@ -40,7 +40,10 @@ const newSchedule = () => {
         <Form.Item
           label="标题"
           name="title"
-          rules={[{ required: true, message: '请输入任务标题' }]}
+          rules={[
+            { required: true, message: '请输入任务标题' },
+            { max: 30, message: '标题最长30个字' },
+          ]}
         >
           <Input placeholder="请输入任务标题" />
         </Form.Item>
@@ -52,7 +55,12 @@ const newSchedule = () => {
         >
           <DatePicker showTime format="YYYY-MM-DD HH:mm" />
         </Form.Item>
-        <Form.Item label="重复方式" name="repeat" initialValue="1">
+        <Form.Item
+          label="重复方式"
+          name="repeat"
+          initialValue="1"
+          rules={[{ required: true, message: '请选择重复方式' }]}
+        >
           <Select>
             {REPEATCONFIG.map((config) => {
               return (
@@ -75,7 +83,7 @@ const newSchedule = () => {
         <Form.Item
           name="remember"
           valuePropName="checked"
-          wrapperCol={{ offset: 8, span: 16 }}
+          wrapperCol={{ offset: 3, span: 16 }}
         >
           <Checkbox>日历提醒我</Checkbox>
         </Form.Item>

@@ -8,6 +8,7 @@
 2. cd daymanage
 3. npm i
 4. npm start
+5. 访问 /home 路径 作为主路径
 
 ## 目录
 ```
@@ -17,7 +18,7 @@
 ├── jest.config.js // 单元测试配置
 ├── mock // mock数据文件
 ├── package.json
-├── public // 静态文件目录
+├── public // 静态文件目录 可以直接```/a.txt```这样访问
 │   └── a.txt
 ├── src
 │   ├── components // 公共组件
