@@ -1,10 +1,11 @@
 import React from 'react';
 import { connect } from 'dva';
-import { IGetInitialProps } from 'umi';
 import { Table, Button } from 'antd';
-import { ColumnsType } from 'antd/lib/table';
 import styles from './index.less';
-import { DayListModelState } from './model';
+import type { DayListModelState } from './model';
+import type { IGetInitialProps } from 'umi';
+import type { ColumnsType } from 'antd/lib/table';
+
 import QueryDay from './components/QueryDay';
 
 interface Iprops {

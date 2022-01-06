@@ -1,9 +1,9 @@
 // 大盘数据
+import styles from '../index.less';
 import React from 'react';
 import { Table, Button } from 'antd';
-import { ColumnsType } from 'antd/lib/table';
-import { IndexModelState } from '../model';
-import styles from '../index.less';
+import type { IndexModelState } from '../model';
+import type { ColumnsType } from 'antd/lib/table';
 interface Iprops {
   outDateList: IndexModelState['outDateList'] | undefined;
 }
@@ -38,7 +38,7 @@ const columns: ColumnsType<object> = [
     },
   },
 ];
-function todayTable(props: Iprops) {
+function OutDateTable(props: Iprops) {
   const { outDateList } = props;
   return (
     <Table
@@ -50,4 +50,4 @@ function todayTable(props: Iprops) {
   );
 }
 
-export default todayTable;
+export default OutDateTable;

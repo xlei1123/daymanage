@@ -1,4 +1,3 @@
-import mockjs from 'mockjs';
 import { delay } from 'roadhog-api-doc';
 
 const proxy = {

@@ -1,4 +1,4 @@
-import { Effect, ImmerReducer, Reducer, Subscription } from 'umi';
+import { Effect, Reducer } from 'umi';
 import * as service from './service';
 export interface IndexModelState {
   todayList: { total?: number; list?: any[] };

@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Form, Input, Button, Checkbox, DatePicker, Select } from 'antd';
 import Editor from '@/components/Editor';
 import { REPEATCONFIG } from '@/config/schedule';
 const initialValue = {
   repeat: '1',
 };
-const newSchedule = () => {
+const NewSchedule = () => {
   const [formValues, setFormValues] = useState<any>(initialValue);
-  const [formInstance] = Form.useForm();
+  const [formInstance] = Form.useForm<any>();
   const onFinish = (values: any) => {
     console.log('Success:', values);
   };
@@ -16,13 +16,9 @@ const newSchedule = () => {
     console.log('Failed:', errorInfo);
   };
 
-  const onValuesChange = (changedValues: any, formValues: any) => {
-    setFormValues(formValues);
+  const onValuesChange = (changedValues: any, values: any) => {
+    setFormValues(values);
   };
-
-  useEffect(() => {
-    console.log(123456);
-  });
 
   return (
     <div>
@@ -98,4 +94,4 @@ const newSchedule = () => {
   );
 };
 
-export default newSchedule;
+export default NewSchedule;

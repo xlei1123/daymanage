@@ -6,6 +6,6 @@ export interface todayParamsType {
 export async function getTodayList(params: todayParamsType) {
   return request(`${baseUrl.requestUrl}/api/homeList`, {
     method: 'get',
-    params: { id: 1 },
+    params: { id: 1 || params.userId },
   });
 }
