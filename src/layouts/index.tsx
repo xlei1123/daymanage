@@ -4,6 +4,8 @@ import Menu from '@/components/Menu';
 import styles from './index.less';
 const { Header, Footer, Sider, Content } = Layout;
 
+React.useLayoutEffect =
+  typeof window !== 'undefined' ? React.useLayoutEffect : React.useEffect;
 interface IProps {
   children: ReactNode;
 }

@@ -21,10 +21,10 @@ const Editor: React.FC<EditProps> = ({ value = {}, onChange }) => {
     json: '',
   });
 
-  const handleContentChange = (value: EditorState) => {
+  const handleContentChange = (val: EditorState) => {
     setEditorState((state) => ({
       ...state,
-      content: value,
+      content: val,
     }));
     onChange?.(value.toHTML());
   };

@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import { Form, Input, Button, Checkbox, DatePicker, Select } from 'antd';
+import React from 'react';
+import { Form, Input, Button, Checkbox } from 'antd';
 
 const login = () => {
   const onFinish = (values: any) => {
+    // eslint-disable-next-line no-console
     console.log('Success:', values);
   };
 
   const onFinishFailed = (errorInfo: any) => {
+    // eslint-disable-next-line no-console
     console.log('Failed:', errorInfo);
   };
 
