@@ -26,8 +26,6 @@ const DayModel: DayModelType = {
   effects: {
     *getDayList({ payload }, { call, put }) {
       const result = yield call(service.getDayList, payload);
-      console.log('result===>', result);
-
       yield put({
         type: 'setDayList',
         payload: result.data,

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Input, Button, Checkbox, DatePicker, Select } from 'antd';
-import Editor from '@/components/Editor';
+import Editor from '@/components/Editor/DynamicIndex';
 import { REPEATCONFIG } from '@/config/schedule';
 const initialValue = {
   repeat: '1',
@@ -73,7 +73,8 @@ const NewSchedule = () => {
           </Form.Item>
         ) : null}
         <Form.Item label="备注" name="remark">
-          <Editor />
+          {/* 服务端渲染的兼容 */}
+          {window ? <Editor /> : null}
         </Form.Item>
 
         <Form.Item
